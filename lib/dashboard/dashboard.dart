@@ -110,100 +110,100 @@ class _DashboardState extends State<Dashboard> {
                 );
               }),
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: <Widget>[
-              Container(
-                color: Colors.pink,
-                height: MediaQuery.of(context).size.height * .25,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: (){
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.dashboard),
-                          SizedBox(width: 8.0,),
-                          Text("DASHBOARD")
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: (){
-
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.dashboard),
-                          SizedBox(width: 8.0,),
-
-                          Text("DASHBOARD")
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: (){
-
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.dashboard),                          SizedBox(width: 8.0,),
-
-
-                          Text("DASHBOARD")
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: (){
-
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.dashboard),
-                          SizedBox(width: 8.0,),
-
-                          Text("DASHBOARD")
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: (){
-
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.dashboard),
-                          SizedBox(width: 8.0,),
-
-                          Text("DASHBOARD")
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
-        ),
+//        drawer: Drawer(
+//          child: ListView(
+//            children: <Widget>[
+//              Container(
+//                color: Colors.pink,
+//                height: MediaQuery.of(context).size.height * .25,
+//              ),
+//              Column(
+//                mainAxisAlignment: MainAxisAlignment.start,
+//                children: <Widget>[
+//                  Padding(
+//                    padding: const EdgeInsets.all(8.0),
+//                    child: InkWell(
+//                      onTap: (){
+//                      },
+//                      child: Row(
+//                        children: <Widget>[
+//                          Icon(Icons.dashboard),
+//                          SizedBox(width: 8.0,),
+//                          Text("DASHBOARD")
+//                        ],
+//                      ),
+//                    ),
+//                  ),
+//
+//                  Padding(
+//                    padding: const EdgeInsets.all(8.0),
+//                    child: InkWell(
+//                      onTap: (){
+//
+//                      },
+//                      child: Row(
+//                        children: <Widget>[
+//                          Icon(Icons.dashboard),
+//                          SizedBox(width: 8.0,),
+//
+//                          Text("DASHBOARD")
+//                        ],
+//                      ),
+//                    ),
+//                  ),
+//                  Padding(
+//                    padding: const EdgeInsets.all(8.0),
+//                    child: InkWell(
+//                      onTap: (){
+//
+//                      },
+//                      child: Row(
+//                        children: <Widget>[
+//                          Icon(Icons.dashboard),                          SizedBox(width: 8.0,),
+//
+//
+//                          Text("DASHBOARD")
+//                        ],
+//                      ),
+//                    ),
+//                  ),
+//                  Padding(
+//                    padding: const EdgeInsets.all(8.0),
+//                    child: InkWell(
+//                      onTap: (){
+//
+//                      },
+//                      child: Row(
+//                        children: <Widget>[
+//                          Icon(Icons.dashboard),
+//                          SizedBox(width: 8.0,),
+//
+//                          Text("DASHBOARD")
+//                        ],
+//                      ),
+//                    ),
+//                  ),
+//                  Padding(
+//                    padding: const EdgeInsets.all(8.0),
+//                    child: InkWell(
+//                      onTap: (){
+//
+//                      },
+//                      child: Row(
+//                        children: <Widget>[
+//                          Icon(Icons.dashboard),
+//                          SizedBox(width: 8.0,),
+//
+//                          Text("DASHBOARD")
+//                        ],
+//                      ),
+//                    ),
+//                  )
+//                ],
+//              )
+//            ],
+//          ),
+//        ),
       ),
     );
   }

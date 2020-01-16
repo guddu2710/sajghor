@@ -22,6 +22,19 @@ class _ProductDetailsState extends State<ProductDetails> {
     "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRxuWGdSO-nuLZofJ3lJBVF5egdp2BME2EY7H6_a4TZJ1fk2vdG-dbGBpL5_C8LPIFMf14NnnuKOZtAJ85ndgu2-Z_a79utdQCiFrpodwrgqtmgEQaZDMTW&usqp=CAE",
     "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRxuWGdSO-nuLZofJ3lJBVF5egdp2BME2EY7H6_a4TZJ1fk2vdG-dbGBpL5_C8LPIFMf14NnnuKOZtAJ85ndgu2-Z_a79utdQCiFrpodwrgqtmgEQaZDMTW&usqp=CAE"
   ];
+  List<int> _locations = [];
+  String _selectedLocation; // Option 2
+
+  var limit=9;
+  @override
+  void initState() {
+    // TODO: implement initState
+    for(int i=0;i<limit;i++){
+      _locations.add(i);
+    }
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -62,7 +75,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               Wrap(
                                 children: <Widget>[
 
-                                  Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",style: TextStyle(color: Colors.black,fontSize: 15.0),),
+                                  Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",style: TextStyle(color: Colors.black,fontSize: 15.0),),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
@@ -70,10 +83,50 @@ class _ProductDetailsState extends State<ProductDetails> {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
+                                        Flexible(
+                                          child: Text('Quantity'),
+                                          flex: 1,
+                                        ),
+                                        Flexible(
+                                          flex: 2,
+                                          child: DropdownButton(
+                                            hint: Text('Quantity'), // Not necessary for Option 1
+                                            value: _selectedLocation,
+                                            onChanged: (newValue) {
+                                              setState(() {
+                                                _selectedLocation = newValue.toString();
+                                              });
+                                            },
+                                            items: _locations.map((location) {
+                                              return DropdownMenuItem(
+                                                child: new Text(location.toString()),
+                                                value: location.toString(),
+                                              );
+                                            }).toList(),
+                                          ),
+                                        ),
+                                      ],),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: <Widget>[
                                           Text("Category:Furniture",style: TextStyle(color: Colors.black),),
                                           Text("\u20B9500",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w600,fontSize: 20.0),),
                                         ],
                                       ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: <Widget>[
+                                          Text("Category:Furniture",style: TextStyle(color: Colors.black),),
+                                          Text("\u20B9500",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w600,fontSize: 20.0),),
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: <Widget>[
+                                          Text("Category:Furniture",style: TextStyle(color: Colors.black),),
+                                          Text("\u20B9500",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w600,fontSize: 20.0),),
+                                        ],
+                                      )
 
                                     ],
                                   )
@@ -161,7 +214,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       width: 4.0,
                     ),
                     Text(
-                      "ADD TO BAG",
+                      "SELL",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
