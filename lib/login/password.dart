@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sajghor/dashboard/dashboard.dart';
+import 'package:sajghor/utils/color.dart';
 class EnterPassword extends StatefulWidget {
   @override
   _EnterPasswordState createState() => _EnterPasswordState();
@@ -11,6 +12,7 @@ class _EnterPasswordState extends State<EnterPassword> {
     return SafeArea(
       child:
       Scaffold(
+        backgroundColor:  MyColors.primary,
         body: ListView(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
@@ -37,7 +39,7 @@ class _EnterPasswordState extends State<EnterPassword> {
 
                             Text(
                               "Enter Password",
-                              style: TextStyle(color: Colors.black,fontSize: 50.0),
+                              style: TextStyle(color:  MyColors.accent,fontSize: 50.0),
                             ),
                           ],
                         ),
@@ -53,7 +55,7 @@ class _EnterPasswordState extends State<EnterPassword> {
                           clipBehavior: Clip.antiAlias,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.shopping_cart,size: 50.0,color:Colors.pink,),
+                            child: Icon(Icons.shopping_cart,size: 50.0,color: MyColors.accent,),
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50,),
@@ -70,7 +72,7 @@ class _EnterPasswordState extends State<EnterPassword> {
                 Padding(
                   padding: const EdgeInsets.only(right:8.0,left:8.0),
                   child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    style: TextStyle(fontSize:18.0),
+                    style: TextStyle(fontSize:18.0,color:  MyColors.accent),
                   ),
                 ),
                 SizedBox(height: 30.0,),
@@ -81,11 +83,10 @@ class _EnterPasswordState extends State<EnterPassword> {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Container(
                       child:  Padding(
-                        padding: const EdgeInsets.only(left:8.0),
+                        padding: const EdgeInsets.only(left:15.0),
                         child: TextFormField(
 
                           keyboardType:TextInputType.number,
-                          maxLength: 10,
                           decoration: new InputDecoration(
                             counterText: '',
                             labelText: 'Enter your Password*',
@@ -97,7 +98,7 @@ class _EnterPasswordState extends State<EnterPassword> {
                             labelStyle: TextStyle(
                                 height:1,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.pink
+                                color:  MyColors.primary
                             ),
                             focusedBorder: new UnderlineInputBorder(
                                 borderSide: BorderSide(
@@ -140,7 +141,7 @@ class _EnterPasswordState extends State<EnterPassword> {
                   MaterialPageRoute(builder: (context) => Dashboard()),
                 );
               },
-              color: Colors.pinkAccent,
+              color:  MyColors.accent,
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -148,14 +149,12 @@ class _EnterPasswordState extends State<EnterPassword> {
 
                     Text(
                       "LOGIN",
-                      style: TextStyle(color: Colors.white,fontSize: 18.0),
+                      style: TextStyle(color:  MyColors.primary,fontSize: 18.0),
                     ),
-                    SizedBox(
-                      width: 4.0,
-                    ),
+
                     Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
+                      Icons.chevron_right,
+                      color:  MyColors.primary,
                     ),
 
                   ],

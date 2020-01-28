@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sajghor/login/verifyMobile.dart';
+import 'package:sajghor/utils/color.dart';
 class EnterMobile extends StatefulWidget {
   @override
   _EnterMobileState createState() => _EnterMobileState();
@@ -11,6 +12,7 @@ class _EnterMobileState extends State<EnterMobile> {
     return SafeArea(
       child:
       Scaffold(
+        backgroundColor: MyColors.primary,
         body: ListView(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
@@ -39,14 +41,14 @@ class _EnterMobileState extends State<EnterMobile> {
                   ),
                     Text(
                       "Welcome to",
-                      style: TextStyle(color: Colors.pink,fontSize:30.0),
+                      style: TextStyle(color: MyColors.accent,fontSize:30.0),
                     ),
                     SizedBox(
                       width: 10.0,
                     ),
                     Text(
                       "সাজঘর",
-                      style: TextStyle(color: Colors.pink,fontSize: 70.0),
+                      style: TextStyle(color:  MyColors.accent,fontSize: 70.0),
                     ),
                   ],
                 ),
@@ -62,7 +64,7 @@ class _EnterMobileState extends State<EnterMobile> {
                           clipBehavior: Clip.antiAlias,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.shopping_cart,size: 50.0,color:Colors.pink,),
+                            child: Icon(Icons.shopping_cart,size: 50.0,color: MyColors.accent,),
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50,),
@@ -79,7 +81,7 @@ class _EnterMobileState extends State<EnterMobile> {
                 Padding(
                   padding: const EdgeInsets.only(right:8.0,left:8.0),
                   child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    style: TextStyle(fontSize:18.0),
+                    style: TextStyle(fontSize:18.0,color: MyColors.accent),
                   ),
                 ),
                 SizedBox(height: 30.0,),
@@ -90,11 +92,12 @@ class _EnterMobileState extends State<EnterMobile> {
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Container(
                     child:  Padding(
-                      padding: const EdgeInsets.only(left:8.0),
+                      padding: const EdgeInsets.only(left:15.0),
                       child: TextFormField(
 
                         keyboardType:TextInputType.number,
                         maxLength: 10,
+                        cursorColor:  MyColors.primary,
                         decoration: new InputDecoration(
                           counterText: '',
                           labelText: 'Enter your mobile no*',
@@ -106,7 +109,7 @@ class _EnterMobileState extends State<EnterMobile> {
                           labelStyle: TextStyle(
                             height:1,
                               fontWeight: FontWeight.bold,
-                              color: Colors.pink
+                              color:  MyColors.primary
                           ),
                           focusedBorder: new UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -149,7 +152,7 @@ class _EnterMobileState extends State<EnterMobile> {
                   MaterialPageRoute(builder: (context) => EnterOTP()),
                 );
               },
-              color: Colors.pinkAccent,
+              color:  MyColors.accent,
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -157,14 +160,12 @@ class _EnterMobileState extends State<EnterMobile> {
 
                     Text(
                       "NEXT",
-                      style: TextStyle(color: Colors.white,fontSize: 18.0),
+                      style: TextStyle(color:  MyColors.primary,fontSize: 18.0),
                     ),
-                    SizedBox(
-                      width: 4.0,
-                    ),
+
                     Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
+                      Icons.chevron_right,
+                      color:  MyColors.primary,
                     ),
 
                   ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sajghor/dashboard/dashboard.dart';
 import 'package:sajghor/login/mobile.dart';
+import 'package:sajghor/utils/color.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 class SplashScreens extends StatefulWidget {
@@ -15,13 +16,13 @@ class _SplashScreenState extends State<SplashScreens> {
 
         seconds: 14,
         navigateAfterSeconds: new EnterMobile(),
-        title: new Text('',
+        title: new Text('সাজঘর',
           style: new TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20.0
           ),),
-        image: new Image.network("https://assets.materialup.com/uploads/3c5d34b0-7188-4a1d-9724-db65264cc568/preview.gif"),
-        backgroundColor:  Color(0xffe93e7c),
+        image: new Image.network("https://media2.giphy.com/media/cn6JDRUYMMXvi/source.gif"),
+        backgroundColor:  MyColors.primary,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,
         onClick: ()=>print("Flutter Egypt"),

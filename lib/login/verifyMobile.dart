@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 import 'package:sajghor/login/password.dart';
 import 'package:sajghor/login/verifiedTick.dart';
+import 'package:sajghor/utils/color.dart';
 class EnterOTP extends StatefulWidget {
   @override
   _EnterOTPState createState() => _EnterOTPState();
@@ -16,6 +17,7 @@ class _EnterOTPState extends State<EnterOTP> {
     return SafeArea(
       child:
       Scaffold(
+        backgroundColor:  MyColors.primary,
         body: ListView(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
@@ -41,7 +43,7 @@ class _EnterOTPState extends State<EnterOTP> {
                           children: <Widget>[
                             Text(
                               "Enter OTP",
-                              style: TextStyle(color: Colors.black,fontSize: 50.0),
+                              style: TextStyle(color:  MyColors.accent,fontSize: 50.0),
                             ),
                           ],
                         ),
@@ -57,7 +59,7 @@ class _EnterOTPState extends State<EnterOTP> {
                           clipBehavior: Clip.antiAlias,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.lock,size: 50.0,color:Colors.pink,),
+                            child: Icon(Icons.lock,size: 50.0,color: MyColors.accent,),
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50,),
@@ -74,7 +76,7 @@ class _EnterOTPState extends State<EnterOTP> {
                 Padding(
                   padding: const EdgeInsets.only(right:8.0,left:8.0),
                   child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    style: TextStyle(fontSize:18.0),
+                    style: TextStyle(fontSize:18.0,color:  MyColors.accent),
                   ),
                 ),
                 SizedBox(height: 30.0,),
@@ -87,14 +89,14 @@ class _EnterOTPState extends State<EnterOTP> {
                     pinBoxWidth: 50.0,
                     hasError: hasError,
                     autofocus: false,
-                    highlightColor: Colors.grey,
-                    hasTextBorderColor: Colors.pink,
-                    defaultBorderColor: Colors.pink,
+                    highlightColor:  MyColors.accent,
+                    hasTextBorderColor:  MyColors.white,
+                    defaultBorderColor:  MyColors.white,
                     pinCodeTextFieldLayoutType: PinCodeTextFieldLayoutType.AUTO_ADJUST_WIDTH,
                     pinBoxDecoration:ProvidedPinBoxDecoration.underlinedPinBoxDecoration,
                     pinTextStyle: TextStyle(
                         fontSize: 18.0,
-                        color: Colors.pink,
+                        color:  MyColors.accent,
                         fontWeight: FontWeight.w600
                     ),
                     onTextChanged: (text) {
@@ -108,7 +110,7 @@ class _EnterOTPState extends State<EnterOTP> {
           Padding(
             padding: const EdgeInsets.only(right:8.0,left:10.0),
             child: Text("RESEND OTP",
-              style: TextStyle(fontSize:18.0,color: Colors.pink,fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize:18.0,color:  MyColors.accent,fontWeight: FontWeight.w500),
             ),
           ),
                 SizedBox(height: MediaQuery.of(context).size.height*.10,)
@@ -138,7 +140,7 @@ class _EnterOTPState extends State<EnterOTP> {
                   MaterialPageRoute(builder: (context) => VerifyTick()),
                 );
               },
-              color: Colors.pinkAccent,
+              color:  MyColors.accent,
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -146,14 +148,12 @@ class _EnterOTPState extends State<EnterOTP> {
 
                     Text(
                       "VERIFY",
-                      style: TextStyle(color: Colors.white,fontSize: 18.0),
+                      style: TextStyle(color:  MyColors.primary,fontSize: 18.0),
                     ),
-                    SizedBox(
-                      width: 4.0,
-                    ),
+
                     Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
+                      Icons.chevron_right,
+                      color:  MyColors.primary,
                     ),
 
                   ],
